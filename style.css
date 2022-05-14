@@ -1,119 +1,138 @@
 * {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	background-color: #FFDCA8;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;	
-	padding: 50px;
+  background-color: #ffdca8;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  padding: 50px;
 }
 
 h1 {
-	text-align: center;
-	margin-bottom: 45px;
+  text-align: center;
+  margin-bottom: 45px;
 }
 
 h2 {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 h3 {
-	margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .container {
-	max-width: 800px;
-	margin: auto;
-	border: 2px solid brown;
-	border-radius: 30px;
-	display: flex;
-	background-color: rgba(255, 255, 255, 0.3);
+  max-width: 800px;
+  margin: auto;
+  border: 2px solid brown;
+  border-radius: 30px;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .items {
-	width: 60%;
-	padding: 20px;
+  width: 60%;
+  padding: 20px;
 }
 
 .cart {
-	width: 40%;
-	padding: 20px;
-	border-left: 2px solid rgb(95, 80, 80);
-	background-image: url('img/cart.png');
-	background-size: 150px;
-	background-position: center;
-	background-repeat: no-repeat;
-	position: relative;
+  width: 40%;
+  padding: 20px;
+  border-left: 2px solid rgb(95, 80, 80);
+  background-image: url("img/cart.png");
+  background-size: 150px;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
 }
 
 .single-item {
-	display: flex;
-	border-bottom: 1px solid grey;
-	padding: 15px 0;
+  display: flex;
+  border-bottom: 1px solid grey;
+  padding: 15px 0;
 }
 
 .single-item:last-child {
-	border-bottom: 0;
+  border-bottom: 0;
 }
 
 .single-item img {
-	max-width: 150px;
+  width: 100%;
+  max-width: 150px;
 }
 
 .single-item .si-content {
-	width: 70%;
-	padding-left: 20px;
-	padding-top: 20px;
+  width: 70%;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.si-content .actions {
+  display: flex;
+  flex-direction: column;
 }
 
 .single-item .si-content p {
-	font-size: 20px;
+  font-size: 20px;
 }
 
 .single-item .actions {
-	width: 30%;
+  width: 30%;
 }
 
 .single-item .actions input {
-	height: 40px;
-	width: 60px;
-	text-align: center;
-	font-size: 18px;
-	border-radius: 5px;
+  height: 40px;
+  width: 60px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
 }
 
 .single-item .actions button {
-	width: 60px;
-	margin-top: 10px;
-	height: 30px;
-	font-size: 16px;
-	border-radius: 5px;
-
+  width: 60px;
+  margin-top: 10px;
+  height: 30px;
+  font-size: 16px;
+  border-radius: 5px;
 }
 
 .cart-single-item {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .cart-single-item h3 {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .cart-single-item button {
-	padding: 5px;
+  padding: 5px;
 }
 
 .total {
-	position: absolute;
-	bottom: 20px;
-	left: 20px;
-	font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 24px;
 }
 
+@media only screen and (max-width: 768px) { 
+  .single-item {
+    flex-direction: column;
+	justify-content: space-between;
+  }
+
+  .actions {
+	  margin-top: 10px;
+  }
+  .single-item .si-content {
+	padding-left: 0px;
+	padding-top: 0px;
+  }
+}
